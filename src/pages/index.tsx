@@ -1,13 +1,17 @@
 import * as React from "react";
 
 import Layout from '../components/Layout';
-import Card from '../components/Card';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <title>Home</title>
-      <Card />
+      <div className="container">
+        <div className="row">
+          <div className="col-12 py-4">
+            <h1>Home</h1>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
