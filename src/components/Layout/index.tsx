@@ -2,6 +2,7 @@ import React, { ReactChild } from "react";
 import './styles.scss';
 
 import Menu from '../Menu';
+import Footer from '../Footer';
 
 interface LayoutProps {
   children: ReactChild | ReactChild[];
@@ -9,10 +10,13 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <main>
+    <>
       <Menu />
-      {children}
-    </main>
+      <main className="mainContainer">
+        {children}
+      </main>
+      <Footer />
+    </>
   )
 }
 
