@@ -1,14 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Menu from '../components/Menu';
 
 const Contact = () => {
   return (
     <>
-      <nav>
-        <Link to='/about' activeStyle={{ color: 'red' }} activeClassName='active'>About</Link>
-        <Link to='/contact' activeStyle={{ color: 'red' }} activeClassName='active'>Contact</Link>
-      </nav>
-
+      <Menu />
       <h1>Contact</h1>
     </>
   )
