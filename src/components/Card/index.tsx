@@ -1,13 +1,23 @@
 import React from "react";
 
-import './styles.module.scss';
+interface CardProps {
+  titleCard: string;
+  textCard: string;
+  colorButton: string;
+}
 
-const Card = () => {
+const Card = ({
+  titleCard,
+  textCard,
+  colorButton
+}: CardProps) => {
   return (
     <div className="card">
-      <h1>Title Card</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, magnam! Iste molestias dolorem aut voluptatibus mollitia officiis quas ducimus, possimus laboriosam et incidunt, velit sequi ab! Dolore distinctio recusandae enim.</p>
-      <button>Button Card</button>
+      <div className="card-body">
+        <h5 className="card-title">{titleCard}</h5>
+        <p className="card-text">{textCard}</p>
+        <a href="#" className={`btn btn-${colorButton}`}>Visitar</a>
+      </div>
     </div>
   )
 }
